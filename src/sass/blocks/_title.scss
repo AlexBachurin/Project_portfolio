@@ -1,0 +1,21 @@
+.title {
+    font-weight: bold;
+    color: $black;
+    font-size: 36px;
+    line-height: 60px;
+    &_size16 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &_size48 {
+        font-size: 48px;
+    }
+    &_size14 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &_size20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
