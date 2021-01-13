@@ -1,17 +1,5 @@
 .skills {
     padding-top: 120px;
-    &__title {
-        position: relative;
-        text-align: center;
-        @include before-circle;
-        &:before {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
     &__wrapper {
         display: grid;
         margin-top: 60px;
@@ -99,7 +87,7 @@
             &-colorbar {
                 background: $main-color;
                 border-radius: 4px;
-                height: 14px;
+                height: 100%;
             }
         }
     }
