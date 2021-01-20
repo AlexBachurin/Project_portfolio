@@ -91,7 +91,7 @@
     <section class="promo">
         <div class="container">
             <div class="title title_size16 promo__subtitle">Меня зовут Александр</div>
-            <h1 class="title title_size48">Я web-разработчик <br>
+            <h1 class="title title_size48 promo__title">Я web-разработчик <br>
                 из города Москва</h1>
             <div class="promo__btns">
                 <a href="" class="promo__link btn">Портфолио</a>
@@ -102,10 +102,21 @@
     <section class="aboutme">
         <div class="container">
             <div class="aboutme__wrapper">
-                <div class="aboutme__photo"><img src="img/main.jpeg" alt="mainphoto"></div>
+                <!-- <div class="aboutme__photo"><img 
+                        srcset="img/main-min.jpeg 300w,
+                            img/main.cut.jpeg 400w"
+                        sizes="(max-width: 576px) 280px,
+                               (min-width: 577px) 400px"
+                        src="img/main.cut.jpeg"   
+                        alt="mainphoto"></div> -->
+                <picture class="aboutme__photo">
+                    <source media="(max-width: 576px)" srcset="img/main-min.jpg">
+                    <source media="(min-width: 577px)" srcset="img/main.cut.jpeg">
+                    <img src="img/main.cut.jpeg" alt="mainphoto">
+                </picture>
                 <div class="aboutme__descr">
                     <h2 class="title title_size16 aboutme__header">Про меня</h2>
-                    <div class="title">Меня зовут Александр</div>
+                    <div class="title aboutme__title">Меня зовут Александр</div>
                     <div class="divider"></div>
                     <div class="aboutme__text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -129,7 +140,7 @@
                     <div class="aboutme__skills-item">
                         <div class="aboutme__skills-img aboutme__skills-img_pl18"><img
                                 src="icons/about_me/mobile_dev.svg" alt="mobiledev"></div>
-                        <div class="aboutme__skills-block">
+                        <div class="aboutme__skills-block aboutme__skills-block_adaptpadding">
                             <div class="title title_size14">Разработка приложений</div>
                             <div class="aboutme__skills-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -440,18 +451,24 @@
 
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input type="text" name="name" id="name">
+                            <input type="text" required name="name" id="name">
                             <label for="name">Ваше имя</label>
                         </div>
                         <div class="contacts__input">
-                            <input type="email" name="email" id="email">
+                            <input type="email" required name="email" id="email">
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
                             <textarea name="text" id="text" ></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
-                        <div><button class="btn contacts__btn">Отправить сообщение</button></div>
+                        <div class="contacts__actions">
+                            <button class="btn contacts__btn">Отправить сообщение</button>
+                            <div class="contacts__policy">
+                                <input type="checkbox" required>
+                                <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

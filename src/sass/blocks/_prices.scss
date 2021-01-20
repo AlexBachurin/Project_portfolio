@@ -5,6 +5,7 @@
         padding: 0px 75px 0px 50px;
         display: grid;
         grid-template-columns: 366px 366px;
+        grid-auto-rows: minmax(45px, auto);
         justify-content: space-between;
     }
     &__item {

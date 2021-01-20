@@ -9,9 +9,9 @@
     &__photo {
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-    }
-    &__descr {
     }
     &__title {
         position: relative;
@@ -51,6 +51,23 @@
             display: block;
             left: 12px;
             top: -9px;
+        }
+    }
+    &__actions {
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    &__policy {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        justify-self: end;
+        align-self: center;
+        color: $black;
+        input {
+            margin-right: 10px;
         }
     }
     &__input {

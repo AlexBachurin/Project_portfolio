@@ -30,6 +30,12 @@
             background-color: rgba(#000, 0);
             transition: 0.3s;
         }
+        img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+        }
+        
     }
     #plans {
         grid-row: 1/3;
